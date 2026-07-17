@@ -69,7 +69,7 @@ object DeepSeekApi {
                     ApiResult.Error("API Key 无权限访问", isAuthError = true)
                 }
 
-                HttpURLConnection.HTTP_TOO_MANY_REQUESTS -> {
+                429 -> {
                     ApiResult.Error("请求过于频繁，请稍后再试")
                 }
 
