@@ -23,12 +23,16 @@
                 android:resource="@xml/widget_info" />
         </receiver>
 
-        <!-- Widget Configuration Activity -->
+        <!-- Main Launcher Activity (also used for widget configuration) -->
         <activity
             android:name=".WidgetConfigActivity"
             android:exported="true"
-            android:theme="@style/Theme.DeepSeekBalance.Config"
+            android:theme="@style/Theme.DeepSeekBalance"
             android:windowSoftInputMode="adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_CONFIGURE" />
             </intent-filter>
