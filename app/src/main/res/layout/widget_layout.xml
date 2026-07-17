@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- DeepSeek Balance Home Screen Widget Layout -->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/widget_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/widget_bg"
+    android:padding="12dp"
+    tools:context=".BalanceWidgetProvider">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <!-- Header: Title + Status Icon -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="DeepSeek"
+                android:textColor="#FF8A8A8A"
+                android:textSize="11sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/widget_status_icon"
+                android:layout_width="14dp"
+                android:layout_height="14dp"
+                android:layout_marginStart="6dp"
+                android:contentDescription="状态"
+                android:src="@drawable/ic_sync"
+                tools:src="@drawable/ic_check" />
+
+        </LinearLayout>
+
+        <!-- Spacer -->
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <!-- Balance Amount -->
+        <TextView
+            android:id="@+id/widget_balance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:includeFontPadding="false"
+            android:text="— —"
+            android:textColor="#FFFFFFFF"
+            android:textSize="36sp"
+            android:textStyle="bold"
+            tools:text="¥110.00" />
+
+        <!-- Currency -->
+        <TextView
+            android:id="@+id/widget_currency"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#FF8A8A8A"
+            android:textSize="10sp"
+            tools:text="CNY" />
+
+        <!-- Spacer -->
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <!-- Status Text -->
+        <TextView
+            android:id="@+id/widget_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="#FFB0B0B0"
+            android:textSize="12sp"
+            tools:text="正常" />
+
+        <!-- Sub Info (granted/topped-up breakdown) -->
+        <TextView
+            android:id="@+id/widget_sub_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLines="1"
+            android:textColor="#FF6A6A6A"
+            android:textSize="9sp"
+            tools:text="赠送 ¥10.00 · 充值 ¥100.00" />
+
+        <!-- Details button (subtle) -->
+        <TextView
+            android:id="@+id/widget_details_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:gravity="center"
+            android:text="详情"
+            android:textColor="#FF4A9EFF"
+            android:textSize="9sp" />
+
+    </LinearLayout>
+
+</FrameLayout>

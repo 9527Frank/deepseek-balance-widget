@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Widget Configuration / Balance Details Activity -->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FF1A1A2E"
+    android:fillViewport="true"
+    tools:context=".WidgetConfigActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <!-- App Icon + Title -->
+        <ImageView
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="24dp"
+            android:contentDescription="DeepSeek"
+            android:src="@drawable/ic_deepseek"
+            app:tint="#FF4A9EFF" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="DeepSeek 余额监控"
+            android:textColor="#FFFFFFFF"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="桌面组件 · 实时查询"
+            android:textColor="#FF8A8A8A"
+            android:textSize="13sp" />
+
+        <!-- API Key Section -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            app:cardBackgroundColor="#FF16213E"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="0dp"
+            app:strokeColor="#FF2A2A4A"
+            app:strokeWidth="1dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="API Key"
+                    android:textColor="#FFFFFFFF"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    app:boxBackgroundColor="#FF0D1B2A"
+                    app:boxCornerRadiusTopEnd="8dp"
+                    app:boxCornerRadiusTopStart="8dp"
+                    app:boxStrokeColor="#FF2A2A4A"
+                    app:hintTextColor="#FF6A6A6A"
+                    app:passwordToggleDrawable="@drawable/ic_eye"
+                    app:passwordToggleEnabled="true">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_api_key"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="monospace"
+                        android:hint="sk-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+                        android:inputType="textVisiblePassword"
+                        android:textColor="#FFFFFFFF"
+                        android:textColorHint="#FF6A6A6A"
+                        android:textSize="13sp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/btn_save"
+                        android:layout_width="0dp"
+                        android:layout_height="44dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_weight="1"
+                        android:backgroundTint="#FF4A9EFF"
+                        android:text="保存"
+                        android:textAllCaps="false"
+                        android:textColor="#FFFFFFFF"
+                        android:textSize="14sp"
+                        app:cornerRadius="22dp" />
+
+                    <Button
+                        android:id="@+id/btn_clear"
+                        android:layout_width="0dp"
+                        android:layout_height="44dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_weight="1"
+                        android:backgroundTint="#FF3A1A1A"
+                        android:text="清除"
+                        android:textAllCaps="false"
+                        android:textColor="#FFFF6B6B"
+                        android:textSize="14sp"
+                        app:cornerRadius="22dp" />
+
+                </LinearLayout>
+
+                <!-- Status text -->
+                <TextView
+                    android:id="@+id/tv_status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:textColor="#FF8A8A8A"
+                    android:textSize="12sp" />
+
+                <!-- Progress indicator -->
+                <ProgressBar
+                    android:id="@+id/progress_bar"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="8dp"
+                    android:indeterminateTint="#FF4A9EFF"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Balance Card -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/balance_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:visibility="visible"
+            app:cardBackgroundColor="#FF16213E"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="0dp"
+            app:strokeColor="#FF2A2A4A"
+            app:strokeWidth="1dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="24dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="当前余额"
+                    android:textColor="#FF8A8A8A"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/tv_balance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:includeFontPadding="false"
+                    android:text="—"
+                    android:textColor="#FFFFFFFF"
+                    android:textSize="42sp"
+                    android:textStyle="bold"
+                    tools:text="¥110.00" />
+
+                <TextView
+                    android:id="@+id/tv_balance_details"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:gravity="center"
+                    android:lineSpacingExtra="4dp"
+                    android:textColor="#FF8A8A8A"
+                    android:textSize="12sp"
+                    tools:text="可用状态：可用\n赠送余额：¥10.00\n充值余额：¥100.00" />
+
+                <Button
+                    android:id="@+id/btn_refresh"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="16dp"
+                    android:backgroundTint="#FF2A2A4A"
+                    android:drawablePadding="6dp"
+                    android:drawableStart="@drawable/ic_sync"
+                    android:paddingHorizontal="20dp"
+                    android:text="刷新"
+                    android:textAllCaps="false"
+                    android:textColor="#FFFFFFFF"
+                    android:textSize="14sp"
+                    app:cornerRadius="20dp" />
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Info footer -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:text="点击余额卡片可复制 · 组件每30分钟自动更新\n点击组件可手动刷新"
+            android:textColor="#FF5A5A5A"
+            android:textSize="11sp" />
+
+    </LinearLayout>
+
+</ScrollView>

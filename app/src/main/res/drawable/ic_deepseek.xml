@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- DeepSeek-style "D" logo icon -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="48dp"
+    android:height="48dp"
+    android:viewportWidth="48"
+    android:viewportHeight="48">
+    <!-- Outer circle -->
+    <path
+        android:fillColor="#FF4A9EFF"
+        android:pathData="M24,4C12.96,4 4,12.96 4,24s8.96,20 20,20 20,-8.96 20,-20S35.04,4 24,4zM24,40c-8.82,0,-16,-7.18,-16,-16S15.18,8 24,8s16,7.18 16,16 -7.18,16 -16,16z" />
+    <!-- "D" letter -->
+    <path
+        android:fillColor="#FFFFFFFF"
+        android:pathData="M16,14v20h6.5c5.5,0 9.5,-4.2 9.5,-10s-4,-10 -9.5,-10H16zM22.2,30H20V18h2.2c3.3,0 5.8,2.5 5.8,6s-2.5,6 -5.8,6z" />
+</vector>

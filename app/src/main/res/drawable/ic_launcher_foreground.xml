@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Launcher icon foreground -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!-- DeepSeek D logo centered in adaptive icon safe zone (66dp bounding box) -->
+    <path
+        android:fillColor="#FF4A9EFF"
+        android:pathData="M54,18C34.1,18 18,34.1 18,54s16.1,36 36,36 36,-16.1 36,-36S73.9,18 54,18zM54,86c-17.64,0,-32,-14.36,-32,-32s14.36,-32 32,-32 32,14.36 32,32 -14.36,32 -32,32z" />
+    <path
+        android:fillColor="#FFFFFFFF"
+        android:pathData="M42,38v32h11c7.7,0 14,-5.6 14,-16s-6.3,-16 -14,-16H42zM52,66h-4V42h4c5.2,0 9,3.8 9,12s-3.8,12 -9,12z" />
+</vector>
