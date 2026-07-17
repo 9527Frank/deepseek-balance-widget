@@ -9,3 +9,7 @@
 
 # Keep ViewBinding classes
 -keep class com.deepseek.balancewidget.databinding.** { *; }
+
+# EncryptedSharedPreferences (Tink) 引用了 javax.annotation 但实际不需要
+-dontwarn javax.annotation.Nullable
+-dontwarn javax.annotation.concurrent.GuardedBy

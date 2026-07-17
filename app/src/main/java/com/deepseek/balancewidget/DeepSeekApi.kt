@@ -58,10 +58,6 @@ object DeepSeekApi {
                 }
 
                 HttpURLConnection.HTTP_UNAUTHORIZED -> {
-                    // Read error body for more context
-                    val errorBody = try {
-                        connection.errorStream?.bufferedReader()?.readText() ?: ""
-                    } catch (_: Exception) { "" }
                     ApiResult.Error("API Key 无效，请检查密钥", isAuthError = true)
                 }
 
@@ -74,9 +70,6 @@ object DeepSeekApi {
                 }
 
                 else -> {
-                    val errorBody = try {
-                        connection.errorStream?.bufferedReader()?.readText() ?: ""
-                    } catch (_: Exception) { "" }
                     ApiResult.Error("服务器错误 ($responseCode)")
                 }
             }.also {
