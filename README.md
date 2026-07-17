@@ -22,7 +22,7 @@
 
 ### 方法一：直接下载 APK（推荐）
 
-1. 在 [Releases](https://github.com/your-username/deepseek-balance-widget/releases) 页面下载最新的 APK
+1. 在 [Releases](https://github.com/9527Frank/deepseek-balance-widget/releases) 页面下载最新的 APK
 2. 在 Honor 30 上安装 APK
 3. 长按桌面空白处 → **服务卡片/组件** → 找到 **DeepSeek 余额**
 4. 添加到桌面 → 输入你的 DeepSeek API Key
@@ -47,7 +47,7 @@
 
 ```bash
 # 1. 克隆项目
-git clone https://github.com/your-username/deepseek-balance-widget.git
+git clone https://github.com/9527Frank/deepseek-balance-widget.git
 cd deepseek-balance-widget
 
 # 2. 用 Android Studio 打开
